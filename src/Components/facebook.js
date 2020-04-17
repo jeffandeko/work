@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login';
-import { server } from '../Function';
+// import { server } from '../Function';
 
 export default class Facebook extends Component {
     constructor(props) {
@@ -15,10 +15,11 @@ export default class Facebook extends Component {
 
     };
     responseFacebook = response => {
-        server({
-            page: 'facebook',
-            response
-        }).then().catch(e => alert(e))
+        console.log(response);
+        // server({
+        //     page: 'facebook',
+        //     response
+        // }).then().catch(e => alert(e))
 
     };
 
@@ -47,10 +48,9 @@ export default class Facebook extends Component {
                 appId="578679659668343"
                 autoLoad={true}
                 fields="name,email,picture"
-                onClick={() => this.componentClicked}
                 callback={() => this.responseFacebook()}
-                cssClass="my-facebook-button-class"
-                icon="fa-facebook"
+            // cssClass="my-facebook-button-class"
+            // icon="fa-facebook"
             />);
         }
         return (

@@ -1,17 +1,23 @@
 import React from 'react';
 import './App.css';
-import Facebook from './Components/facebook'
+// import Facebook from './Components/facebook'
+import Google from './Components/googleloging'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="">
-        <h1 className="App-tittle"> Work with Facebook</h1>
-      </header>
-      <p className="App-intro"> Welcome </p>
-      <Facebook />
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path='/' component={Google}>
+          </Route>
+          <Route path='/'>
 
-    </div>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+
   );
 }
 
